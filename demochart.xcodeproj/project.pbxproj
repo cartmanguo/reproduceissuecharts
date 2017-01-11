@@ -12,7 +12,47 @@
 		250C4DCD1E25F88A00B67409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250C4DCB1E25F88A00B67409 /* Main.storyboard */; };
 		250C4DCF1E25F88A00B67409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250C4DCE1E25F88A00B67409 /* Assets.xcassets */; };
 		250C4DD21E25F88A00B67409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250C4DD01E25F88A00B67409 /* LaunchScreen.storyboard */; };
+		250C4DE21E25F94100B67409 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250C4DDF1E25F8EE00B67409 /* Charts.framework */; };
+		250C4DE31E25F94100B67409 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 250C4DDF1E25F8EE00B67409 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		250C4DDE1E25F8EE00B67409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 250C4DD91E25F8ED00B67409 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		250C4DE01E25F8EE00B67409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 250C4DD91E25F8ED00B67409 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		250C4DE41E25F94100B67409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 250C4DD91E25F8ED00B67409 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		250C4DE61E25F94100B67409 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				250C4DE31E25F94100B67409 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		250C4DC41E25F88A00B67409 /* demochart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demochart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +62,7 @@
 		250C4DCE1E25F88A00B67409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		250C4DD11E25F88A00B67409 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		250C4DD31E25F88A00B67409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		250C4DD91E25F8ED00B67409 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250C4DE21E25F94100B67409 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +96,7 @@
 		250C4DC61E25F88A00B67409 /* demochart */ = {
 			isa = PBXGroup;
 			children = (
+				250C4DD91E25F8ED00B67409 /* Charts.xcodeproj */,
 				250C4DC71E25F88A00B67409 /* AppDelegate.swift */,
 				250C4DC91E25F88A00B67409 /* ViewController.swift */,
 				250C4DCB1E25F88A00B67409 /* Main.storyboard */,
@@ -62,6 +105,15 @@
 				250C4DD31E25F88A00B67409 /* Info.plist */,
 			);
 			path = demochart;
+			sourceTree = "<group>";
+		};
+		250C4DDA1E25F8ED00B67409 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				250C4DDF1E25F8EE00B67409 /* Charts.framework */,
+				250C4DE11E25F8EE00B67409 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +126,12 @@
 				250C4DC01E25F88A00B67409 /* Sources */,
 				250C4DC11E25F88A00B67409 /* Frameworks */,
 				250C4DC21E25F88A00B67409 /* Resources */,
+				250C4DE61E25F94100B67409 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				250C4DE51E25F94100B67409 /* PBXTargetDependency */,
 			);
 			name = demochart;
 			productName = demochart;
@@ -112,12 +166,35 @@
 			mainGroup = 250C4DBB1E25F88A00B67409;
 			productRefGroup = 250C4DC51E25F88A00B67409 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 250C4DDA1E25F8ED00B67409 /* Products */;
+					ProjectRef = 250C4DD91E25F8ED00B67409 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				250C4DC31E25F88A00B67409 /* demochart */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		250C4DDF1E25F8EE00B67409 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 250C4DDE1E25F8EE00B67409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		250C4DE11E25F8EE00B67409 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 250C4DE01E25F8EE00B67409 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		250C4DC21E25F88A00B67409 /* Resources */ = {
@@ -143,6 +220,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		250C4DE51E25F94100B67409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 250C4DE41E25F94100B67409 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		250C4DCB1E25F88A00B67409 /* Main.storyboard */ = {
@@ -258,6 +343,7 @@
 		250C4DD71E25F88A00B67409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CJB7J53M7;
 				INFOPLIST_FILE = demochart/Info.plist;
@@ -271,6 +357,7 @@
 		250C4DD81E25F88A00B67409 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8CJB7J53M7;
 				INFOPLIST_FILE = demochart/Info.plist;
